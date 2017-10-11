@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #FFF1BC;
+}
+
+* {
+  user-select: none;
+  font-family: "dosis", sans-serif, 微軟正黑體;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.btn-wrapper {
+  width: 200px;
+  height: 100vh;
+  margin: 0 auto;
+  line-height: 100vh;
+}
+
+button {
+  letter-spacing: 1px;
+  font-size: 2em;
+  width: 200px;
+  height: 66.66667px;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+  background-color: #B499EC;
+  cursor: pointer;
+  box-shadow: 0px 8px #946ee4, 5px 10px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+button:hover {
+  background-color: #bda6ee;
+}
+button:active {
+  box-shadow: 0px 5px #946ee4, 2px 5px 5px rgba(0, 0, 0, 0.5);
+  transform: translate(0px, 3px);
+}
+
+.click {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 500px;
+    height: 500px;
+  }
+}

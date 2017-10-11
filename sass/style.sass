@@ -1,0 +1,61 @@
+$color_bg: #FFF1BC
+$color_btn: #B499EC
+@mixin size($w)
+  width: $w
+  height: $w / 3
+body, html
+  padding: 0
+  margin: 0
+  background-color: $color_bg
+*
+  user-select: none
+  font-family: 'dosis', sans-serif , 微軟正黑體
+  box-sizing: border-box
+  position: relative
+
+.btn-wrapper
+  width: 200px
+  height: 100vh
+  margin: 0 auto
+  line-height: 100vh
+button
+  letter-spacing: 1px
+  font-size: 2em
+  +size(200px)
+  border: 0
+  border-radius: 5px
+  outline: 0
+  color: white
+  background-color: $color_btn
+  cursor: pointer
+  box-shadow: 0px 8px darken($color_btn,10) , 5px 10px 10px rgba(black, .3) 
+  overflow: hidden
+  &:hover
+    background-color: lighten($color_btn, 3)
+  &:active
+    box-shadow: 0px 5px darken($color_btn,10), 2px 5px 5px rgba(black, .5)
+    transform: translate(0px, 3px)   
+    
+.click
+  position: absolute
+  left: 10px
+  top: 10px
+  width: 0px
+  height: 0px
+  transform: translate(-50%, -50%)
+  border-radius: 50%
+  background-color: rgba(white, 0.3)
+  opacity: 0
+    
+@keyframes ripple
+  0%
+    opacity: 1
+    width: 0
+    height: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+    width: 500px
+    height: 500px
+
